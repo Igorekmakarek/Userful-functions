@@ -1,0 +1,11 @@
+//количество цифр в числе
+int func(int a) {
+        int k = 0;
+        while (a > 0) {
+            a = a / 10;
+            k++;
+        }
+        return k;
+    }
+    
+    
