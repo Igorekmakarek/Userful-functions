@@ -1,0 +1,32 @@
+
+#include <iostream>
+
+using namespace std;
+
+void devideIntoNumerals (int *p, int k, int N) {
+    for (int i = 0; i < k; i++) {
+            *(p + i) = N % (int)pow(10, k - i) / pow (10, k - (i + 1));
+    }
+}
+
+int count(int a) {
+        int k = 0;
+        while (a > 0) {
+            a = a / 10;
+            k++;
+        }
+        return k;
+}
+
+int main () {
+    int N;
+    cin >> N;
+    int k = 0;
+    k = count(N);
+  int *p = new int[k];
+    devideIntoNumerals(p, k, N);
+    for (int i = 0; i < k; i++)
+    cout << *(p + i) << endl;
+
+return 0;
+}
