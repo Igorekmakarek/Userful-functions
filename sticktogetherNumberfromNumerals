@@ -1,0 +1,7 @@
+int stickTogether(int *p, int k) {
+    int num = 0;
+    for (int i = 0; i < k; i++) {
+       num = num + *(p + i) * pow(10,k - i);
+    }
+    return num;
+}
